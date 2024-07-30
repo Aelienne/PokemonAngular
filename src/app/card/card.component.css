@@ -1,0 +1,15 @@
+button {
+  border-radius: 5px;
+  margin: 10px;
+}
+a {
+  border: solid 2px white;
+  background-color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 5px;
+}
+div {
+  background-color: rgb(173, 167, 167);
+  margin: 5px;
+}

@@ -1,0 +1,69 @@
+.container {
+  margin: auto;
+  background-image: url("../../../public/2200032_50ba6.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 500px;
+  position: relative;
+}
+
+#sprite {
+  position: absolute;
+  width: 207px;
+  height: 210px;
+  top: 158px;
+  left: 19px;
+}
+
+#details {
+  padding: 5px;
+  color: black;
+  position: absolute;
+
+  border-radius: 5px;
+  width: 188px;
+  height: 234px;
+  top: 162px;
+  left: 290px;
+  font-weight: bold;
+}
+
+.type-container {
+  display: flex;
+  width: 100%;
+}
+
+.types {
+  width: 25px;
+  height: 25px;
+  margin: 0 8px;
+}
+
+.stas-container {
+  display: flex;
+  height: 100px;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-top: 5px;
+}
+
+.stats-col {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  justify-content: space-evenly;
+}
+
+.arrows {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: space-around;
+  margin-top: -14px;
+}
+img {
+  width: 200px;
+  height: 200px;
+}

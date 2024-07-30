@@ -1,0 +1,17 @@
+.carousel {
+  margin-bottom: 20px;
+}
+
+.pokemon-cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+img {
+  width: 512px;
+}
+
+#previous,
+#next {
+  height: 10%;
+}

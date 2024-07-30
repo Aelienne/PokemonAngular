@@ -1,0 +1,49 @@
+<h1 class="text-center mb-5">Mon équipe</h1>
+
+<section class="mb-5 d-flex align-items-center">
+  <div id="sac" class="w-40" (click)="toggleDisplay()">
+    <img
+      src="https://www.cdiscount.com/pdt2/2/4/6/2/700x700/ban3701405800246/rw/sac-a-dos-du-dresseur-pokemon-bandai-sasha-b.jpg"
+      alt="Sac à dos"
+      style="width: 500px; height: 500px"
+    />
+  </div>
+  <div
+    style="flex-direction: column"
+    class="w-50 container"
+    [style.display]="isElementVisible ? 'flex' : 'none'"
+  >
+    <div *ngFor="let pokemon of mesPokemons; let i = index" class="d-flex">
+      <img
+        src="https://static.wikia.nocookie.net/pokemon-fano/images/6/6f/Poke_Ball.png"
+        alt="Pokeball"
+        class="w-25"
+        style="margin: 20px"
+        (click)="toggleDis(i)"
+      />
+      <img
+        class="pokem"
+        [style.display]="isElementVis ? 'flex' : 'none'"
+        [src]="pokemon.sprites.regular"
+        [alt]="pokemon.name.fr"
+        class="w-25"
+        (mouseover)="showDescription(i)"
+        (mouseleave)="hideDescription()"
+      />
+      <div
+        [ngClass]="visibleI === i ? 'visible' : 'invisible'"
+        class="w-25 d-flex flex-column align-items-center justify-content-center"
+      >
+        <h2>{{ pokemon.name.fr }}</h2>
+        <div class="d-flex justify-content-around w-100">
+          @for (type of pokemon.types; track type.name) {
+          <div class="d-flex flex-column align-items-center">
+            <img [src]="type.image" alt="{{ type.name }}" class="types" />
+            <p>{{ type.name }}</p>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,10 @@
+<div
+  id="carousel"
+  class="d-flex justify-content-around align-items-center border border-1"
+>
+  <button id="previous" (click)="prevPic()"><</button>
+  <div id="card">
+    <img [src]="pokemons[i].sprites.regular" />
+  </div>
+  <button id="next" (click)="nextPic()">></button>
+</div>

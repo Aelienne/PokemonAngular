@@ -1,0 +1,40 @@
+<input
+  [(ngModel)]="searchValue"
+  type="text"
+  placeholder="Cherchez votre pokemon ici"
+/>
+<div *ngFor="let pokemonIt of pokemons | searchPokedex : searchValue">
+  <a (click)="display(pokemonIt.pokedex_id)">{{ pokemonIt.name.fr }}</a>
+</div>
+<div class="container">
+  <div id="sprite">
+    <img [src]="pokemon?.sprites?.regular" alt="{{ pokemon?.name?.fr }}" />
+  </div>
+  <div id="details">
+    <p>#{{ pokemon?.pokedex_id }}</p>
+    <p>Name : {{ pokemon?.name?.fr }}</p>
+    <div class="type-container">
+      <p>Type :</p>
+      @for (type of pokemon?.types; track type.name) {
+      <div class="types d-flex flex-column align-items-center">
+        <img [src]="type.image" alt="{{ type.name }}" />
+      </div>
+      }
+    </div>
+    <p style="margin-top: 5px">Stats :</p>
+    <div class="stas-container">
+      @for (stat of pokemon?.stats; track stat) {
+      <div class="stats-col">
+        <p>Atk : {{ stat?.atk }}</p>
+        <p>Def : {{ stat?.def }}</p>
+        <p>Hp : {{ stat?.hp }}</p>
+      </div>
+      <div class="stats-col">
+        <p>Sp-atk : {{ stat?.spe_atk }}</p>
+        <p>Sp-def : {{ stat?.spe_def }}</p>
+        <p>Vel : {{ stat?.vit }}</p>
+      </div>
+      }
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<section>
+  <h1>Voici tous les Pokemons</h1>
+
+  <div class="row">
+    @for (pokemon of pokemons; track pokemon.pokedex_id) {
+    <app-card [onePokemon]="pokemon" class="col-6"></app-card>
+    }
+  </div>
+</section>

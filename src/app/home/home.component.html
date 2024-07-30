@@ -1,0 +1,12 @@
+<section>
+  <h1 class="text-center mb-5">Bienvenue, voici des pokemons</h1>
+  <p>{{ 1722238803416 | date : "fullDate" }}</p>
+  <p>Montant HT : {{ 1000 }}</p>
+  <p>Montant TTC : {{ 1000 | convertHTtoTTC }}</p>
+  <app-carousel class="border border-1 rounded"></app-carousel>
+  <div class="d-flex justify-content-around my-5">
+    @for (pokemon of pokemons; track pokemon.pokedex_id) {
+    <app-card [onePokemon]="pokemon"></app-card>
+    }
+  </div>
+</section>
